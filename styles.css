@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "Segeo UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body{
+     background: linear-gradient(135deg, #0f172a, #1e293b); /*fundo com gradiente*/
+    display: flex;
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertical*/
+    height: 100vh; /* altura da janela de visualização*/
+    flex-direction: column;
+
+}
+
+.calculadora{
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.calculadora h1{
+    margin-bottom: 1.5rem; /*espaço abaixo do titulo*/
+    color: #e0f2fe;
+    font-size: 1.5rem;
+}
+
+/*campos de entrada do usuario*/
+.calculadora input[type="text"]{
+    width: calc(50%-10px); /*divide o espaço em 2 input lado a lado*/
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/*quando for clicado*/
+.calculadora input[type="text"]:focus{
+    border-color: #38bdf8;
+    outline: none; /*remove o contorno*/
+}
+
+.calculadora button{
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/*efeito ao passar o mouse*/
+.calculadora button:houver{
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+/*area do resultado*/
+#resultado {
+    font-weight: bold;
+    color: #f1f5f9;
+    margin-top: 10px;
+    display: inline-block;
+    word-break: break-all; /*quebra palavras grandes*/
+}
+
+.footer{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85;
+    opacity: 0.6; /* transparencia suave*/
+    pointer-events: none;
+    user-select: none;
+}

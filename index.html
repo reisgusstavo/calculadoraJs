@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculadora TSco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="calculadora">
+        <h1>Calculadora Binária 8 Bits</h1>
+        <input type="text" id="decimalinput" placeholder="Decimal (0-255)"> <!--Campo de entrada para decimal-->
+        <button onclick="converterparabinario()">Decimal Para Binário</button> <!--butão para chamar a função-->
+        <br><br>
+
+        <input type="text" id="binario1" placeholder="Binário 1 (8bits)" maxlength="8"> <!--binario com no maximo 8 bit-->
+        <input type="text" id="binario2" placeholder="Binario 2 (8 bits)" maxlength="8"> <!--lenght = comprimento-->
+        <br>
+
+        <button onclick="addbinario()">Somar</button><!--chama a funçao de soma-->
+        <button onclick="subtrairBinario()"> Subtrair </button>
+        <button onclick="multiplicarBinario()">Multiplicar</button>
+        <button onclick="dividirBinario()">Dividir</button>
+        <button onclick="converterparacomplementode2()">Binário para Complemento de 2</button>
+        <button onclick="converterparahexouocta()">Binário para Hexadecimal ou Octal</button>
+
+        <br><br>
+
+        <p>RESULTADO: <span id="resultado"></span></p>
+    </div>
+
+    <footer>Desenvolvido por Gusatavo Reis e Vitor Bernardo © 2025</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
