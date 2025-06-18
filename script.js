@@ -1,9 +1,8 @@
 function converterparabinario(){
    let decimal =  parseInt(document.getElementById("decimalinput").value); /*pareint converte string em numero int*/
 
-
 if (decimal >= 0 && decimal <= 255) {
-    let binario = decimal.toString(2).padStart(8, '0'); /* tosrting converte numero para string e o padstart completa um texto com caracter a esquerda*/
+    let binario = decimal.toString(2).padStart(8, '0'); /*padstart completa um texto com caracter a esquerda*/
     document.getElementById("resultado").innerText = binario;
 } else {
     alert("insira um número decimal entre 0 e 255");
@@ -23,8 +22,8 @@ function addbinario(){
     let binario2 = document.getElementById("binario2").value;
 
     if (validateBinary(binario1) && validateBinary(binario2)){
-        let sum = (parseInt(binario1, 2) + parseInt(binario2, 2)).toString(2).padStart(8,'0');
-        document.getElementById("resultado").innerText = sum;
+        let soma = (parseInt(binario1, 2) + parseInt(binario2, 2)).toString(2).padStart(8,'0');
+        document.getElementById("resultado").innerText = soma;
     }
 }
 
@@ -53,8 +52,8 @@ function subtrairBinario(){
     let binario2 = document.getElementById("binario2").value;
 
     if (validateBinary(binario1) && validateBinary(binario2) && parseInt(binario2,2) !==0) /*verificar se o divisor não é 0*/ {
-        let = quotient = (Math.floor(parseInt(binario1, 2) / parseInt(binario2, 2))).toString(2).padStart(8, '0');
-        document.getElementById("resultado").innerText = quotient;
+        let = divisao = (Math.floor(parseInt(binario1, 2) / parseInt(binario2, 2))).toString(2).padStart(8, '0');
+        document.getElementById("resultado").innerText = divisao;
         
     } else {
         alert("Divisão por zero ou entrada inválida");
